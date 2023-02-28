@@ -1,0 +1,25 @@
+<section>
+  <div class="success-msg">
+    Dane użytkownika:
+  </div>
+  <table *ngIf="user">
+    <tr>
+      <th>Imię</th>
+      <td>{{ user.firstname }}</td>
+    </tr>
+    <tr>
+      <th>Nazwisko</th>
+      <td>{{ user.lastname }}</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>{{ user.email }}</td>
+    </tr>
+    <tr>
+      <th>Hasło</th>
+      <td>{{ hidePassword(user.password )}}</td>
+    </tr>
+  </table>
+
+  <button (click)="logout()">Wyloguj</button>
+</section>
